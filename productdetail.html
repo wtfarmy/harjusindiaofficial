@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Blow Gun - Harjus Hardwares</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .images {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .images img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .details h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #e53935;
+      margin: 10px 0;
+    }
+
+    .description {
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .stock {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #ffb400;
+      margin-bottom: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-cart {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    .btn-cart:hover {
+      background-color: #1565c0;
+    }
+
+    .btn-buy {
+      background-color: #ff6f00;
+      color: white;
+    }
+
+    .btn-buy:hover {
+      background-color: #e65100;
+    }
+
+    .reviews {
+      margin-top: 30px;
+    }
+
+    .review-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .review-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      flex: 1;
+    }
+
+    .review-name {
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .review-time {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .review-stars {
+      color: #ffb400;
+    }
+
+    @media (max-width: 768px) {
+      .product-section {
+        flex-direction: column;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="product-section">
+      <div class="images">
+        <img src="https://via.placeholder.com/400x300?text=Air+Blow+Gun+Front" alt="Air Blow Gun Front" />
+        <img src="https://via.placeholder.com/400x300?text=Nozzle+Detail" alt="Nozzle Detail" />
+        <img src="https://via.placeholder.com/400x300?text=Air+Compressor+Connection" alt="Air Compressor Connection" />
+      </div>
+
+      <div class="details">
+        <h2>Industrial Air Blow Gun - High Pressure</h2>
+        <div class="price">₹299</div>
+        <div class="rating">★★★★☆ (4.4/5)</div>
+        <div class="stock">In Stock</div>
+        <p class="description">
+          Durable and lightweight air blow gun designed for industrial and automotive use. Perfect for cleaning machinery, workshop benches, corners, and hard-to-reach areas. Features an ergonomic grip and precision nozzle for controlled airflow.
+        </p>
+        <ul>
+          <li>Material: ABS + Metal Nozzle</li>
+          <li>Pressure Range: Up to 10 Bar</li>
+          <li>Air Inlet: 1/4 inch BSP</li>
+          <li>Use: Dust removal, cleaning machines, workshops</li>
+        </ul>
+
+        <div class="btn-group">
+          <button class="btn btn-cart">Add to Cart</button>
+          <button class="btn btn-buy">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <h3>Customer Reviews</h3>
+
+      <div class="review-item">
+        <img class="review-avatar" src="bulletbike.jpg" alt="User" />
+        <div class="review-content">
+          <div class="review-name">Ramesh Tools Co.</div>
+          <div class="review-time">1 day ago</div>
+          <div class="review-stars">★★★★★</div>
+          <p>"Super high pressure output and easy to grip. Works well with all our compressors."</p>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <img class="review-avatar" src="https://i.pravatar.cc/50?img=33" alt="User" />
+        <div class="review-content">
+          <div class="review-name">Priyanshu</div>
+          <div class="review-time">4 days ago</div>
+          <div class="review-stars">★★★★☆</div>
+          <p>"Very useful in our garage for cleaning engine parts. Strong airflow!"</p>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <img class="review-avatar" src="https://i.pravatar.cc/50?img=70" alt="User" />
+        <div class="review-content">
+          <div class="review-name">Dildar Singh</div>
+          <div class="review-time">6 days ago</div>
+          <div class="review-stars">★★★★☆</div>
+          <p>"Good build quality and perfect fit with our pneumatic system. Worth the price."</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
