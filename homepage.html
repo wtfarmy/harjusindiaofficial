@@ -14,15 +14,16 @@
     }
 
     body {
-      background: linear-gradient(to right,rgba(0, 255, 242, 0.03),#ffffff,#ff00510c);
+      background: linear-gradient(to right, rgba(0, 255, 242, 0.03), #ffffff, #ff00510c);
       color: black;
     }
+
     @media (max-width: 600px) {
-  .search-container input {
-    display: block;
-    width: 100%;
-  }
-}
+      .search-container input {
+        display: block;
+        width: 100%;
+      }
+    }
 
     .mario-container {
       flex: 1;
@@ -72,7 +73,7 @@
 
     header {
       /* background: rgb(32, 32, 32);\ */
-      background: linear-gradient(40deg, rgb(21, 21, 21) 50%, rgb(255, 0, 81) 50%, #f90000);
+      background: linear-gradient(to right, rgb(255, 0, 81) 50%, #ea0101);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,7 +88,7 @@
     .logo {
       display: flex;
       align-items: center;
-      background: linear-gradient(90deg, #ff005d, #d3d1d2, #ff0040, #958a91);
+      background: linear-gradient(90deg, #000000, #8e7f87, #ffffff, #958a91);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 200% auto;
@@ -162,7 +163,7 @@
       align-items: center;
     }
 
-  
+
     .latest-label {
       margin: 1rem;
       background: #22c55e;
@@ -174,14 +175,6 @@
       border-radius: 8px;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-   
     .gamepad-illustration {
       display: flex;
       justify-content: flex-end;
@@ -352,33 +345,8 @@
       flex-grow: 1;
     }
 
-    .game-label {
-      font-size: 12px;
-      color: #5c5c5c;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
 
-    .tournament-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: rgb(23, 23, 23);
-      margin-bottom: 10px;
-    }
-
-    .calendar {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      color: rgb(43, 43, 43);
-      margin-bottom: 10px;
-    }
-
-    .calendar::before {
-      content: "📅";
-      margin-right: 6px;
-    }
-
+    
     .organizer {
       background: rgb(28, 28, 28);
       border-radius: 10px;
@@ -437,16 +405,11 @@
       overflow-x: hidden;
     }
 
-    .mcheadingtitle {
+    .headoftitle{
       font-size: clamp(1.5rem, 4vw, 3rem);
       font-weight: 900;
       font-family: 'Press Start 2P', cursive;
-      white-space: nowrap;
-      background: linear-gradient(to right, #cd0022, #312227);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
+      color: rgb(255, 0, 30);
       text-shadow: none;
       text-align: center;
       animation: pulseGlow 2s infinite alternate;
@@ -971,37 +934,6 @@
       }
     }
 
-    /* Retro Grid Background */
-    .retrobg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.093) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
-      background-size: 40px 40px;
-      z-index: 0;
-      animation: gridMove 20s linear infinite;
-    }
-
-    /* Scanline Flicker */
-    .scanlines {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: repeating-linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.921) 0px,
-          rgb(0, 0, 0) 1px,
-          transparent 2px,
-          transparent 4px);
-      z-index: 1;
-      animation: flicker 0.15s infinite;
-    }
-
     /* Retro Particles */
     .particles {
       position: absolute;
@@ -1269,7 +1201,7 @@
         -2px 0 rgb(0, 0, 0),
         2px 0 rgb(0, 0, 0);
     }
-    
+
 
     .product-grid {
       display: grid;
@@ -1281,7 +1213,7 @@
       background: white;
       border-radius: 8px;
       padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s;
     }
 
@@ -1344,6 +1276,7 @@
         font-size: 16px;
       }
     }
+
     .intro-video {
       display: flex;
       justify-content: center;
@@ -1367,82 +1300,91 @@
     }
 
     /* Popup Overlay */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
-/* Popup Box */
-.popup-box {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 15px;
-  text-align: center;
-  width: 90%;
-  max-width: 350px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: popup 0.3s ease;
-}
+    /* Popup Box */
+    .popup-box {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      animation: popup 0.3s ease;
+    }
 
-@keyframes popup {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+    @keyframes popup {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
 
-.popup-icons img {
-  width: 40px;
-  margin: 10px;
-}
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 
-.popup-success-icon img {
-  width: 50px;
-  margin-bottom: 10px;
-}
+    .popup-icons img {
+      width: 40px;
+      margin: 10px;
+    }
 
-.popup-options {
-  text-align: left;
-  margin: 20px 0;
-}
+    .popup-success-icon img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
 
-.popup-options label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
+    .popup-options {
+      text-align: left;
+      margin: 20px 0;
+    }
 
-/* Buttons */
-.btn-yes, .btn-ok {
-  background: linear-gradient( to right, #fee81e,#fa0d4c);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin-top: 10px;
-  font-size: 16px;
-  width: 100%;
-  cursor: pointer;
-}
+    .popup-options label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
 
-.btn-later {
-  background: #eee;
-  color: #333;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin-top: 10px;
-  font-size: 16px;
-  width: 100%;
-  cursor: pointer;
-}
-  /* Common icon button styling */
+    /* Buttons */
+    .btn-yes,
+    .btn-ok {
+      background: linear-gradient(to right, #fee81e, #fa0d4c);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .btn-later {
+      background: #eee;
+      color: #333;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    /* Common icon button styling */
     .icon-btn {
       position: fixed;
       top: 20px;
@@ -1459,12 +1401,15 @@
       transform: scale(1.1);
     }
 
-    #openSearch, #closeSearch {
-      right: 60px; /* move away from hamburger */
+    #openSearch,
+    #closeSearch {
+      right: 60px;
+      /* move away from hamburger */
     }
 
     #menuToggle {
-      right: 20px; /* hamburger on far right */
+      right: 20px;
+      /* hamburger on far right */
     }
 
     .hide {
@@ -1474,7 +1419,8 @@
     /* Search Overlay */
     .search-overlay {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.95);
@@ -1528,50 +1474,51 @@
       background: #333;
     }
 
-    
 
- .game-slider-container {
-  text-align: center;
-  padding: 2rem 1rem;
-  overflow-x: hidden;
-}
 
-.game-slider {
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  gap: 1rem;
-  scroll-snap-type: x mandatory;
-  padding: 1rem 0;
-  -webkit-overflow-scrolling: touch;
-  scroll-padding: 0 1rem;
-}
+    .game-slider-container {
+      text-align: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
 
-.game-card22 {
-  flex: 0 0 auto;
-  width: 240px;
-  height: 320px;
-  background: #222;
-  border-radius: 12px;
-  overflow: hidden;
-  scroll-snap-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  cursor: pointer;
-}
+    .game-slider {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      padding: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 0 1rem;
+    }
 
-@media (max-width: 768px) {
-  .game-slider {
-    padding: 0 1rem;
-    justify-content: flex-start;
-  }
+    .game-card22 {
+      flex: 0 0 auto;
+      width: 240px;
+      height: 320px;
+      background: #222;
+      border-radius: 12px;
+      overflow: hidden;
+      scroll-snap-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
+    }
 
-  .game-card22 {
-    width: 180px;
-    height: 240px;
-    scroll-snap-align: center;
-  }
-}
+    @media (max-width: 768px) {
+      .game-slider {
+        padding: 0 1rem;
+        justify-content: flex-start;
+      }
+
+      .game-card22 {
+        width: 180px;
+        height: 240px;
+        scroll-snap-align: center;
+      }
+    }
+
     .game-card22 img {
       width: 100%;
       height: 100%;
@@ -1583,6 +1530,7 @@
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
+
     .iconbadge22 {
       position: absolute;
       top: 10px;
@@ -1619,6 +1567,427 @@
     .badgtext {
       font-size: 16px;
     }
+
+    #community-posts {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .community-title h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: left;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .community-title h2:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 40px;
+      height: 3px;
+      background-color: #ff4f4f;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.3s ease;
+      /* Smooth sliding transition */
+    }
+
+    .community-post {
+      flex: 0 0 300px;
+      margin: 0 10px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .community-post:hover {
+      transform: scale(1.05);
+    }
+
+    .post-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 3px solid #f1f1f1;
+    }
+
+    .post-content {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .post-content h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .post-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      color: #ff4f4f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 1;
+      display: none;
+      /* Hide navigation arrows */
+    }
+
+    .nav-left,
+    .nav-right {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* For responsive and optimal mobile design */
+    @media (max-width: 768px) {
+      #community-posts {
+        padding: 10px;
+      }
+
+      .community-title h2 {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .slider-container {
+        padding: 0 10px;
+      }
+
+      .slider {
+        display: flex;
+      }
+
+      .community-post {
+        flex: 0 0 200px;
+        margin: 0 10px;
+      }
+
+      /* Hide navigation arrows on small screens */
+      .slider-nav {
+        display: none;
+      }
+    }
+
+    .bgblackcolor {
+      background-color: #000000da;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-section {
+      padding: 20px;
+    }
+
+    .product-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 15px;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .product-card {
+      flex: 0 0 250px;
+      scroll-snap-align: start;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 10px;
+    }
+
+    .product-info h3 {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+
+    .product-rating {
+      color: #ffa500;
+      font-size: 14px;
+    }
+
+    .last-sold {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .product-info button {
+      margin-top: 10px;
+      padding: 6px 10px;
+      background: #ff002b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .product-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        overflow-x: unset;
+      }
+
+      .product-card {
+        flex: none;
+      }
+    }
+
+    /* Overlay styling */
+    .product-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .overlay-content {
+      background: #fff;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .overlay-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbnails {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .detail-info {
+      flex: 2 1 400px;
+    }
+
+    .review {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .review img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .review span {
+      font-size: 12px;
+      color: gray;
+      margin-left: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    form textarea {
+      height: 60px;
+    }
+
+    form button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lined-content{
+      background:linear-gradient(to right, #151515e3,#000);
+    }
+
+    .netflix-title {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e50926;
+  padding: 20px;
+  margin: 0;
+  display: inline-block;
+  border-left: 8px solid #e50914;
+  animation: fadeInZoom 1s ease-out;
+}
+
+/* Optional entrance animation */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.story-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #111;
+  color: white;
+  font-family: 'Courier New', monospace;
+  border-left: 5px solid #e50914;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #e50914;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+  font-size: 2.2rem;
+  color: #e50914;
+  font-weight: bold;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #e50914 }
+}
+
+.story-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 20px;
+  position: relative;
+}
+
+#readMoreBtn {
+  margin-top: 15px;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#readMoreBtn:hover {
+  background-color: #b0060f;
+}
+
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -1626,6 +1995,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+<script>
+  function showProductDetail(productId) {
+    // Example: show details based on the product ID
+    const productTitle = `Product ${productId}`;
+    const productDescription = `This is the full description of Product ${productId}.`;
+
+    document.getElementById('product-title-detail').innerText = productTitle;
+    document.getElementById('product-description').innerText = productDescription;
+
+    // Show the overlay
+    document.getElementById('product-overlay').style.display = 'flex';
+  }
+
+  function closeProductDetail() {
+    document.getElementById('product-overlay').style.display = 'none';
+  }
+
+</script>
 <script>
   // JavaScript to handle the transition
   window.onload = () => {
@@ -1654,6 +2041,7 @@
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <!-- Firebase Auth -->
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <body>
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
@@ -1662,7 +2050,7 @@
     <span id="userEmail"></span>
     <img id="userPic" class="profile-pic" style="display:none;" />
     <button id="loginBtn">Login</button>
-    <a href="index.html" onclick="toggleSidebar()"><i class="fas fa-box"></i> <b>Home</b></a>
+    <a href="product.html" onclick="toggleSidebar()"><i class="fas fa-box"></i> <b>Products</b></a>
     <a href="membership.html" onclick="toggleSidebar()"><i class="fas fa-book"></i> <b>Our Story</b></a>
     <a href="#" onclick="toggleSidebar()"><i class="fas fa-user"></i> <b>Contact/Feedback!</b></a>
     <br>
@@ -1673,97 +2061,141 @@
       <img src="harjus.jpg" />
       <b>Harjus India</b>
     </div>
-  <!-- 🔍 Search Icon -->
-  <button class="icon-btn" id="openSearch" title="Open Search">
-    <i class="fas fa-search"></i>
-  </button>
 
-  <!-- ❌ Close Search Icon -->
-  <button class="icon-btn hide" id="closeSearch" title="Close Search">
-    <i class="fas fa-times"></i>
-  </button>
+    <!-- 🔍 Search Icon -->
+    <button class="icon-btn" id="openSearch" title="Open Search">
+      <i class="fas fa-search"></i>
+    </button>
 
-  <!-- ☰ Hamburger Menu Icon -->
-  <button class="icon-btn" id="menuToggle" title="Toggle Menu"  onclick="toggleSidebar()">
-    <i class="fas fa-bars"></i>
-  </button>
+    <!-- ❌ Close Search Icon -->
+    <button class="icon-btn hide" id="closeSearch" title="Close Search">
+      <i class="fas fa-times"></i>
+    </button>
 
-  <!-- Overlay Search Area -->
-  <div class="search-overlay" id="searchOverlay">
-    <input 
-      type="search" 
-      id="searchBar" 
-      placeholder="Search Pipes, Air Guns, Our Story , etc.." 
-      autocomplete="on" 
-      inputmode="text"
-    />
-    <ul id="resultList"></ul>
-  </div>
+    <!-- ☰ Hamburger Menu Icon -->
+    <button class="icon-btn" id="menuToggle" title="Toggle Menu" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay Search Area -->
+    <div class="search-overlay" id="searchOverlay">
+      <input type="search" id="searchBar" placeholder="Search Pipes, Air Guns, Our Story , etc.." autocomplete="on"
+        inputmode="text" />
+      <ul id="resultList"></ul>
+    </div>
   </header>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <div class="game-slider-container">
-    <div class="badgetexticon">
-      <span class="badgtext">✨</span>
-      Our Products
-    </div>
-  <br>
+    <div class="lined-content">
+      <div class="membership-section">
+        <h2 class="membership-offer"><b>Harjus India</b></h2>
+      </div>
+      <div class="game-slider-container">
+        <div class="game-slider">
+          <div class="game-card22">
+            <span class="iconbadge22">Harjus Official</span>
+            <a href="productdetail.html" style="text-decoration: none;">
+            <img src="Air BLOW GUN.png" />
+          </a>
+          </div>
+          <div class="game-card22">
+            <span class="iconbadge22">Harjus Official</span>
+            <a href="prodetail2.html" style="text-decoration: none;">
+            <img src="Air BLOW GUN (1).png"  />
+          </a>
+          </div>
+          <div class="game-card22">
+            <span class="iconbadge22">Harjus Official</span>
+            <img src="Air BLOW GUN (2).png"  />
+          </div>
+   
+        </div>
+      </div>
+      </div>
 <br>
-<div class="product-grid">
-    
-  <!-- Product 1 -->
-  <a href="productdetail.html" class="product-card" style="text-decoration: none; color: inherit;">
-    <img src="Air BLOW GUN.png" class="product-img" alt="Gaming Mouse" />
-    <div class="product-title">Industrial Air Blow Gun</div>
-    <div class="product-price">₹1,299</div>
-    <div class="stars">★★★★☆ (4.2)</div>
-    <div class="reviews">
-      <div class="review">"Super high pressure output and easy to grip. Works well with all our compressors."</div>
-      <div class="reviewer">- Rahul M.</div>
-    </div>
-  </a>
-  
-
-  <!-- Product 2 -->
-  <a href="pupipes.html" class="product-card" style="text-decoration: none; color: inherit;">
-    <img src="Air BLOW GUN (1).png" class="product-img" alt="Gaming Mouse" />
-    <div class="product-title">PU Pneumatic Pipe</div>
-    <div class="product-price">₹899</div>
-    <div class="stars">★★★★★ (4.9)</div>
-    <div class="reviews">
-      <div class="review">"Extremely flexible and easy to install. We use it in all our pneumatic lines."</div>
-      <div class="reviewer">- Vinod Dis.</div>
-    </div>
-  </a>
-
-  <!-- Product 3 -->
-  <!-- <a href="productdetail.html" class="product-card" style="text-decoration: none; color: inherit;">
-    <img src="https://via.placeholder.com/300x200?text=Gaming+Mouse" class="product-img" alt="Gaming Mouse" />
-    <div class="product-title">Pro Gaming Mouse RGB</div>
-    <div class="product-price">₹1,499</div>
-    <div class="stars">★★★★☆ (4.2)</div>
-    <div class="reviews">
-      <div class="review">"Smooth and fast response. Loved it!"</div>
-      <div class="reviewer">- Rahul M.</div>
-    </div>
-  </a>
-   -->
- 
+<div class="headoftitle">
+  <h2>
+    <b>
+      Our Products!
+    </b>
+  </h2>
 </div>
 <br>
+  <div class="product-section">
+    <div class="product-container">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x160" />
+        <div class="product-info">
+          <h3>Air Blow Gun</h3>
+          <div class="product-rating">⭐⭐⭐⭐☆</div>
+          <p>₹1300</p>
+          <p class="last-sold">250+ Sold Last Month</p>
+          <button  onclick="window.location.href='productdetail.html'">Detail</button>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="showProductDetail(2)">
+        <img src="https://via.placeholder.com/250x160/0000FF" />
+        <div class="product-info">
+          <h3>PU Pneumatic Pipe</h3>
+          <div class="product-rating">⭐⭐⭐☆☆</div>
+          <p>₹899</p>
+          <p class="last-sold">300+ Sold Last Month</p>
+          <button onclick="window.location.href='prodetail2.html'">Detail</button>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="showProductDetail(3)">
+        <img src="https://via.placeholder.com/250x160/FF0000" />
+        <div class="product-info">
+          <h3>Pneumatic Nail Gun</h3>
+          <div class="product-rating">⭐⭐⭐⭐⭐</div>
+          <p>$120.49</p>
+          <p class="last-sold">800+ Sold Last Month</p>
+          <button onclick="window.location.href='productdetail.html'">Detail</button>
+        </div>
+      </div>
+    <div class="product-card" onclick="showProductDetail(3)">
+      <img src="https://via.placeholder.com/250x160/FF0000" />
+      <div class="product-info">
+        <h3>Pneumatic Nail Gun</h3>
+        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+        <p>$120.49</p>
+        <p class="last-sold">800+ Last Month</p>
+          <button onclick="window.location.href='productdetail.html'">Detail</button>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="story-section">
+  <h2 class="netflix-title">Story of Harjus</h2>
+  <p id="storyText" class="story-text">
+    <!-- First 100 words shown initially -->
+    Harjus was not just a name in the hardware business—he was a visionary. From the dusty alleys of a small industrial town, he built an empire with tools, pipes, and pneumatic power. His dream was forged not just in steel, but in resilience. Every screw he sold, every valve he engineered, told a story of purpose. Through challenges and competitors, Harjus thrived with honesty, precision, and a relentless drive to empower industries. 
+    <span id="dots">...</span>
+    <span id="moreText" style="display: none;">
+      As time passed, his company didn’t just grow—it inspired. Young entrepreneurs looked up to Harjus, not because he made millions, but because he made a difference. His legacy wasn't in the machines—but in the people he helped build along the way. And this is just the beginning.
+    </span>
+  </p>
+  <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+</div>
+
+<br>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+  <br>
   <footer class="footer">
     <div class="footer-col">
       <div class="footer-logo">Harjus India Official</div>
-    <div class="footer-col">
-      <h4>Mail Us!</h4>
-      <form class="subscribe">
-        <input type="email" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+      <div class="footer-col">
+        <h4>Mail Us!</h4>
+        <form class="subscribe">
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
   </footer>
 
   <div class="footer-bottom">
@@ -1771,14 +2203,14 @@
   </div>
   <script>
     const keywordPages = {
-      "products": "tournaments.html",
-      "product": "games.html",
-      "new": "gaming.html",
-      "pipes": "match.html",
-      "air gun": "freefire.html",
-      "Air guns": "pubg.html",
-      "Air gun": "minecraft.html",
-      "Harjus": "valorant.html",
+      "products": "product.html",
+      "product": "product.html",
+      "new": "product.html",
+      "pipes": "product.html",
+      "air gun": "product.html",
+      "Air guns": "product.html",
+      "Air gun": "product.html",
+      "Harjus": "product.html",
       "story/our story": "cod.html",
     };
 
@@ -1915,20 +2347,41 @@
 
   </script>
 
-<script>
-  function enableNotifications() {
-  document.getElementById('popup').style.display = 'none';
-  document.getElementById('popup-success').style.display = 'flex';
-}
+  <script>
+    function enableNotifications() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('popup-success').style.display = 'flex';
+    }
 
-function closePopup() {
-  document.getElementById('popup').style.display = 'none';
-}
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
 
-function closeSuccess() {
-  document.getElementById('popup-success').style.display = 'none';
+    function closeSuccess() {
+      document.getElementById('popup-success').style.display = 'none';
+    }
+  </script>
+
+  
+    <script>
+function toggleReadMore() {
+  const dots = document.getElementById("dots");
+  const moreText = document.getElementById("moreText");
+  const btnText = document.getElementById("readMoreBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    moreText.style.display = "none";
+    btnText.innerHTML = "Read More";
+  } else {
+    dots.style.display = "none";
+    moreText.style.display = "inline";
+    btnText.innerHTML = "Read Less";
+  }
 }
 </script>
+
+
 </body>
 
 </html>
