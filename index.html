@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harjus India</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -27,7 +28,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to right, #d0003b,#ff001e);
+      background: linear-gradient(to right, #d0003b, #ff001e);
       padding: 10px 20px;
       position: relative;
     }
@@ -41,7 +42,10 @@
 
     .logo {
       display: flex;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       align-items: center;
+      font-style: bold;
+      font-weight: bolder;
     }
 
     .logo img {
@@ -54,7 +58,7 @@
       font-weight: 900;
       font-style: bolder;
       font-weight: bolder;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff, #ff0000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -66,6 +70,7 @@
       0% {
         background-position: 0% center;
       }
+
       100% {
         background-position: 200% center;
       }
@@ -124,123 +129,129 @@
       }
     }
 
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 30px 20px;
-  background-color: #ffffff;
-}
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px 20px;
+      background-color: #ffffff;
+    }
 
-.hero-text {
-  flex: 1;
-  padding: 10px;
-}
+    .hero-text {
+      flex: 1;
+      padding: 10px;
+    }
 
-.hero-text h4 {
-  color: #888;
-  font-size: 16px;
-}
+    .hero-text h4 {
+      color: #888;
+      font-size: 16px;
+    }
 
-.hero-text h1 {
-  font-size: 36px;
-  margin: 10px 0;
-}
+    .hero-text h1 {
+      font-size: 36px;
+      margin: 10px 0;
+    }
 
-.hero-text p {
-  margin: 15px 0;
-  color: #555;
-}
+    .hero-text p {
+      margin: 15px 0;
+      color: #555;
+    }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.hero-buttons button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 14px;
-}
+    .hero-buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+    }
 
-.discover-btn {
-  background-color: #111;
-  color: white;
-}
+    .discover-btn {
+      background-color: #111;
+      color: white;
+    }
 
-.cart-btn {
-  background-color: white;
-  border: 1px solid #111;
-  color: #111;
-}
+    .cart-btn {
+      background-color: white;
+      border: 1px solid #111;
+      color: #111;
+    }
 
     .hero-image {
-  position: relative;
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  overflow: hidden; /* Ensures images don't overflow */
-}
+      position: relative;
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      overflow: hidden;
+      /* Ensures images don't overflow */
+    }
 
-.slider {
-  position: relative;
-  max-width: 100%; /* Full width of the parent container */
-  height: auto;
-}
+    .slider {
+      position: relative;
+      max-width: 100%;
+      /* Full width of the parent container */
+      height: auto;
+    }
 
-.slide {
-  display: none; /* Hide slides initially */
-  width: 100%;
-  height: auto;
-}
+    .slide {
+      display: none;
+      /* Hide slides initially */
+      width: 100%;
+      height: auto;
+    }
 
-.slide img {
-  width: 100%;
-  border-radius: 10px;
-}
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.price-tag {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #f03;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  line-height: 1.2;
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease forwards; /* Fade-in animation */
-}
+    .price-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #f03;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      line-height: 1.2;
+      opacity: 0;
+      /* Initially hidden */
+      animation: fadeIn 1s ease forwards;
+      /* Fade-in animation */
+    }
 
-/* Keyframes for the fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+    /* Keyframes for the fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-@media (max-width: 768px) {
-  .price-tag {
-    width: 60px;
-    height: 60px;
-    font-size: 10px;
-    top: 10px;
-    right: 10px;
-  }
-}
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .price-tag {
+        width: 60px;
+        height: 60px;
+        font-size: 10px;
+        top: 10px;
+        right: 10px;
+      }
+    }
 
     .features {
       display: flex;
@@ -263,7 +274,7 @@
     }
 
     .features .highlight {
-      background-color: #f03;
+      background-color: rgb(216, 1, 48);
       color: #fff;
       border-radius: 8px;
       padding: 10px 5px;
@@ -320,7 +331,7 @@
         padding: 10px;
       }
 
-   
+
 
 
       .features {
@@ -334,7 +345,7 @@
       }
     }
 
-    
+
     #loginBtn {
       color: white;
       background: linear-gradient(to right, #ff003c, #8c00ff);
@@ -396,133 +407,149 @@
 
     .sidebar {
 
-position: fixed;
-top: 0;
-left: -300px;
-width: 200px;
-height: 100%;
-background: linear-gradient(#090909, #010101d2, #010101cb, #00000084, #ff002f72);
-padding: 10px;
-transition: all 0.3s ease;
-}
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 200px;
+      height: 100%;
+      background: linear-gradient(#090909, #010101d2, #010101cb, #00000084, #ff002f72);
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
 
 
 
-.sidebar.open {
-left: 0;
-}
+    .sidebar.open {
+      left: 0;
+    }
 
-.sidebar .close-btn {
-font-size: 1.5rem;
-cursor: pointer;
-margin-bottom: 1rem;
-text-align: right;
-}
+    .sidebar .close-btn {
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      text-align: right;
+    }
 
-.sidebar a {
-display: block;
-background: linear-gradient(90deg, #e4d2d2, #858282, rgb(255, 255, 254), rgb(181, 114, 114));
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-size: 200% auto;
-font-weight: 900;
-font-family: fantasy;
-animation: shimmer 5s linear infinite;
-text-decoration: none;
-padding: 0.8rem 0;
-}
+    .sidebar a {
+      display: block;
+      background: linear-gradient(90deg, #e4d2d2, #858282, rgb(255, 255, 254), rgb(181, 114, 114));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      font-weight: 900;
+      font-family: fantasy;
+      animation: shimmer 5s linear infinite;
+      text-decoration: none;
+      padding: 0.8rem 0;
+    }
 
-.sidebar a:hover {
-background-color: #ff0000;
-}
+    .sidebar a:hover {
+      background-color: #ff0000;
+    }
 
 
 
-.overlay.show {
-display: block;
-}
+    .overlay.show {
+      display: block;
+    }
 
-/* Hamburger lines color fix */
-.hamburger span {
-background: #fff;
-}
-.netflix-title {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #e50926;
-  padding: 20px;
-  margin: 0;
-  display: inline-block;
-  border-left: 8px solid #e50914;
-  animation: fadeinout 10s ease-in infinite;
-}
+    /* Hamburger lines color fix */
+    .hamburger span {
+      background: #fff;
+    }
 
-/* Optional entrance animation */
-@keyframes fadeInZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.story-section {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #111;
-  color: white;
-  font-family: 'Courier New', monospace;
-  border-left: 5px solid #e50914;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
+    .netflix-title {
+      font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #e50926;
+      padding: 20px;
+      margin: 0;
+      display: inline-block;
+      border-left: 8px solid #e50914;
+      animation: fadeinout 10s ease-in infinite;
+    }
 
-.typewriter {
-  overflow: hidden;
-  border-right: .15em solid #e50914;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
-  font-size: 2.2rem;
-  color: #e50914;
-  font-weight: bold;
-}
+    /* Optional entrance animation */
+    @keyframes fadeInZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
 
-/* Typewriter animation */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #e50914 }
-}
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-.story-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-top: 20px;
-  position: relative;
-}
+    .story-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #111;
+      color: white;
+      font-family: 'Courier New', monospace;
+      border-left: 5px solid #e50914;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
 
-#readMoreBtn {
-  margin-top: 15px;
-  background-color: #e50914;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid #e50914;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+      font-size: 2.2rem;
+      color: #e50914;
+      font-weight: bold;
+    }
 
-section {
+    /* Typewriter animation */
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: #e50914
+      }
+    }
+
+    .story-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    #readMoreBtn {
+      margin-top: 15px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    section {
       padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
@@ -565,7 +592,7 @@ section {
       padding: 10px;
     }
 
-   
+
 
     .product-info h3 {
       margin: 5px 0;
@@ -603,19 +630,22 @@ section {
         flex: none;
       }
     }
-#readMoreBtn:hover {
-  background-color: #b0060f;
-}
- .headlinehead{
-  background:linear-gradient( to right, #ff0073,#cc0000);
-  color: white;
-  text-align: center;
-  align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 18px ;
- }
- .footer {
+
+    #readMoreBtn:hover {
+      background-color: #b0060f;
+    }
+
+    .headlinehead {
+      background: linear-gradient(to right, #ff0073, #cc0000);
+      color: white;
+      text-align: center;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      padding: 18px;
+    }
+
+    .footer {
       margin: 0px;
       background: linear-gradient(to right, #ff0000, #210000);
       color: #fff;
@@ -767,10 +797,10 @@ section {
       align-items: center;
       gap: 8px;
       padding: 6px 14px;
-      border: 1.8px solid rgba(0, 0, 0, 0.471);
+      border: 1.4px solid rgba(0, 0, 0, 0.866);
       border-radius: 999px;
-      background-color: rgba(255, 255, 255, 0.08);
-      color: rgb(22, 22, 22);
+      background-color: rgba(255, 0, 55, 0.66);
+      color: rgb(255, 255, 255);
       font-size: 14px;
       font-weight: 500;
     }
@@ -778,21 +808,25 @@ section {
     .badgtext {
       font-size: 16px;
     }
+
     * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-body {
-  font-weight: bold; /* Make all text bold */
-}
-
+    body {
+      font-weight: bold;
+      /* Make all text bold */
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
 <body>
   <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
   <div class="sidebar" id="sidebar">
@@ -811,7 +845,7 @@ body {
     <div class="top-row">
       <div class="logo">
         <img src="harjus.jpg" alt="Logo">
-       <span><b>Harjus India<sup>™</sup></b></span>
+        <span><b>Harjus India<sup>™</sup></b></span>
       </div>
       <button class="sidebar-toggle" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
@@ -827,54 +861,52 @@ body {
       </div>
     </div>
   </header>
-  
+
   <section class="hero">
     <div class="hero-text">
-     <br>
+      <br>
       <h1>New Arrivals</h1>
       <p>Air Blow Guns, PU Pneumatic Pipes, & More Items...</p>
       <div class="hero-buttons">
-        
-        <div class="badgetexticon">
+
+        <div class="badgetexticon" onclick="window.location.href='product.html'">
           <span class="badgtext">✨</span>
-          With Offers%
+          <b>DISCOVER</b>
         </div>
-        <button class="discover-btn" onclick="window.location.href='product.html'">DISCOVER</button>
-        <br>
       </div>
     </div>
     <div class="hero-image">
       <div class="price-tag">from<br><strong>$29</strong></div>
-  <!-- Slider -->
-  <div class="slider">
-    <div class="slide fade">
-      <img src="Air BLOW GUN.png" alt="Image 1" />
+      <!-- Slider -->
+      <div class="slider">
+        <div class="slide fade">
+          <img src="Air BLOW GUN.png" alt="Image 1" />
+        </div>
+        <div class="slide fade">
+          <img src="Air BLOW GUN (1).png" alt="Image 2" />
+        </div>
+        <div class="slide fade">
+          <img src="Air BLOW GUN (2).png" alt="Image 3" />
+        </div>
+      </div>
     </div>
-    <div class="slide fade">
-      <img src="Air BLOW GUN (1).png" alt="Image 2" />
-    </div>
-    <div class="slide fade">
-      <img src="Air BLOW GUN (2).png" alt="Image 3" />
-    </div>
-  </div>
-</div>
   </section>
   <script>
-  let slideIndex = 0;
-  showSlides();
+    let slideIndex = 0;
+    showSlides();
 
-  function showSlides() {
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach(slide => slide.style.display = "none");
-    slideIndex++;
-    if (slideIndex > slides.length) slideIndex = 1;
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
-  }
-</script>
+    function showSlides() {
+      const slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+  </script>
 
 
-  
+
 
   <section class="features">
     <div><i class="fas fa-lock"></i>SECURE PAYMENTS</div>
@@ -891,7 +923,7 @@ body {
           <div class="product-rating">⭐⭐⭐⭐☆</div>
           <p>₹1300</p>
           <p class="last-sold" style="color: gray;">250+ Sold Last Month</p>
-          <button  onclick="window.location.href='productdetail.html'">Detail</button>
+          <button onclick="window.location.href='productdetail.html'">Detail</button>
         </div>
       </div>
 
@@ -916,184 +948,191 @@ body {
           <button onclick="window.location.href='productdetail.html'">Detail</button>
         </div>
       </div>
-    <div class="product-card" onclick="showProductDetail(3)">
-      <img src="https://via.placeholder.com/250x160/FF0000" />
-      <div class="product-info">
-        <h3>Pneumatic Nail Gun</h3>
-        <div class="product-rating">⭐⭐⭐⭐⭐</div>
-        <p>$120.49</p>
-        <p class="last-sold" style="color: gray;">800+ Last Month</p>
+      <div class="product-card" onclick="showProductDetail(3)">
+        <img src="https://via.placeholder.com/250x160/FF0000" />
+        <div class="product-info">
+          <h3>Pneumatic Nail Gun</h3>
+          <div class="product-rating">⭐⭐⭐⭐⭐</div>
+          <p>$120.49</p>
+          <p class="last-sold" style="color: gray;">800+ Last Month</p>
           <button onclick="window.location.href='productdetail.html'">Detail</button>
+        </div>
       </div>
     </div>
-  </div>
-<br>
-<div class="story-section">
-  <h2 class="netflix-title">Story of Harjus</h2>
-  <p id="storyText" class="story-text">
-    <!-- First 100 words shown initially -->
-    Harjus was not just a name in the hardware business—he was a visionary. From the dusty alleys of a small industrial town, he built an empire with tools, pipes, and pneumatic power. His dream was forged not just in steel, but in resilience. Every screw he sold, every valve he engineered, told a story of purpose. Through challenges and competitors, Harjus thrived with honesty, precision, and a relentless drive to empower industries. 
-    <span id="dots">...</span>
-    <span id="moreText" style="display: none;">
-      As time passed, his company didn’t just grow—it inspired. Young entrepreneurs looked up to Harjus, not because he made millions, but because he made a difference. His legacy wasn't in the machines—but in the people he helped build along the way. And this is just the beginning.
-    </span>
-  </p>
-  <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
-</div>
+    <br>
+    <div class="story-section">
+      <h2 class="netflix-title">Story of Harjus</h2>
+      <p id="storyText" class="story-text">
+        <!-- First 100 words shown initially -->
+        Harjus was not just a name in the hardware business—he was a visionary. From the dusty alleys of a small
+        industrial town, he built an empire with tools, pipes, and pneumatic power. His dream was forged not just in
+        steel, but in resilience. Every screw he sold, every valve he engineered, told a story of purpose. Through
+        challenges and competitors, Harjus thrived with honesty, precision, and a relentless drive to empower
+        industries.
+        <span id="dots">...</span>
+        <span id="moreText" style="display: none;">
+          As time passed, his company didn’t just grow—it inspired. Young entrepreneurs looked up to Harjus, not because
+          he made millions, but because he made a difference. His legacy wasn't in the machines—but in the people he
+          helped build along the way. And this is just the beginning.
+        </span>
+      </p>
+      <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+    </div>
 
-<br>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
-  <br>
-  <footer class="footer">
-    <div class="footer-col">
-      <div class="footer-logo">Harjus India Official</div>
+    <br>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000 });</script>
+    <br>
+    <footer class="footer">
       <div class="footer-col">
-        <h4>Mail Us!</h4>
-        <form class="subscribe">
-          <input type="email" placeholder="Enter your email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-  </footer>
+        <div class="footer-logo">Harjus India Official</div>
+        <div class="footer-col">
+          <h4>Mail Us!</h4>
+          <form class="subscribe">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+    </footer>
 
-  <div class="footer-bottom">
-    © 2025 Harjus. All rights reserved. |
-  </div>
-  <script>
-    function handleSearch() {
-      const query = document.getElementById("searchBar").value.trim().toLowerCase();
-      if (query.includes("pipe") || query.includes("pu")) {
-        window.location.href = "product.html#pipes";
-      } else if (query.includes("blow") || query.includes("gun")) {
-        window.location.href = "product.html#airblow";
-      } else {
-        alert("No matching products found. Try keywords like 'pipe' or 'gun'.");
+    <div class="footer-bottom">
+      © 2025 Harjus. All rights reserved. |
+    </div>
+    <script>
+      function handleSearch() {
+        const query = document.getElementById("searchBar").value.trim().toLowerCase();
+        if (query.includes("pipe") || query.includes("pu")) {
+          window.location.href = "product.html#pipes";
+        } else if (query.includes("blow") || query.includes("gun")) {
+          window.location.href = "product.html#airblow";
+        } else {
+          alert("No matching products found. Try keywords like 'pipe' or 'gun'.");
+        }
       }
-    }
- 
-  </script>
 
-  <script>  const keywordPages = {
-    "products": "product.html",
-    "product": "product.html",
-    "new": "product.html",
-    "pipes": "product.html",
-    "pu pipes": "product.html",
-    "air gun": "product.html",
-    "air guns": "product.html",
-    "harjus": "product.html",
-    "story": "cod.html",
-    "our story": "cod.html"
-  };
+    </script>
 
-  function handleSearch() {
-    const input = document.getElementById("searchBar").value.toLowerCase().trim();
-    for (let keyword in keywordPages) {
-      if (input.includes(keyword)) {
-        window.location.href = keywordPages[keyword];
-        return;
+    <script>  const keywordPages = {
+        "products": "product.html",
+        "product": "product.html",
+        "new": "product.html",
+        "pipes": "product.html",
+        "pu pipes": "product.html",
+        "air gun": "product.html",
+        "air guns": "product.html",
+        "harjus": "product.html",
+        "story": "cod.html",
+        "our story": "cod.html"
+      };
+
+      function handleSearch() {
+        const input = document.getElementById("searchBar").value.toLowerCase().trim();
+        for (let keyword in keywordPages) {
+          if (input.includes(keyword)) {
+            window.location.href = keywordPages[keyword];
+            return;
+          }
+        }
+        alert("No matching page found.");
       }
-    }
-    alert("No matching page found.");
-  }
 
-  function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("open");
-  }
-  </script>
-  <script>
-
-    function redirectToSecure() {
-      window.location.href = "secured-page.html";
-    }
-
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-      document.body.classList.toggle('sidebar-open');
-    }
-
-    function toggleNotification() {
-      const panel = document.getElementById('notificationPanel');
-      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-<script>
-  function toggleReadMore() {
-    const dots = document.getElementById("dots");
-    const moreText = document.getElementById("moreText");
-    const btnText = document.getElementById("readMoreBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      moreText.style.display = "none";
-      btnText.innerHTML = "Read More";
-    } else {
-      dots.style.display = "none";
-      moreText.style.display = "inline";
-      btnText.innerHTML = "Read Less";
-    }
-  }
-  </script>
-
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-    import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyBnDGSg_K60_Tp7w13c-O8Jb9hLkErSCY8",
-      authDomain: "gamexd-110.firebaseapp.com",
-      projectId: "gamexd-110",
-      storageBucket: "gamexd-110.firebasestorage.app",
-      messagingSenderId: "501792431454",
-      appId: "1:501792431454:web:10024d189316ef9e2303cf"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
-
-    const loginBtn = document.getElementById("loginBtn");
-    const logoutBtn = document.getElementById("logoutBtn");
-    const userEmail = document.getElementById("userEmail");
-    const userPic = document.getElementById("userPic");
-    const dropdown = document.getElementById("dropdown");
-
-    loginBtn.addEventListener("click", () => {
-      signInWithPopup(auth, provider)
-        .then(result => console.log("Logged in as", result.user.email))
-        .catch(err => console.error(err));
-    });
-
-    logoutBtn.addEventListener("click", () => {
-      signOut(auth).then(() => location.reload());
-    });
-
-    onAuthStateChanged(auth, user => {
-      if (user) {
-        userEmail.textContent = user.email;
-        userPic.src = user.photoURL;
-        userPic.style.display = "block";
-        loginBtn.style.display = "none";
-      } else {
-        userEmail.textContent = "";
-        loginBtn.style.display = "inline-block";
-        userPic.style.display = "none";
-        dropdown.style.display = "none";
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
       }
-    });
+    </script>
+    <script>
 
-    userPic.addEventListener("click", () => {
-      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest("#userPic") && !e.target.closest("#dropdown")) {
-        dropdown.style.display = "none";
+      function redirectToSecure() {
+        window.location.href = "secured-page.html";
       }
-    });
 
-  </script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+        document.body.classList.toggle('sidebar-open');
+      }
+
+      function toggleNotification() {
+        const panel = document.getElementById('notificationPanel');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+    <script>
+      function toggleReadMore() {
+        const dots = document.getElementById("dots");
+        const moreText = document.getElementById("moreText");
+        const btnText = document.getElementById("readMoreBtn");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          moreText.style.display = "none";
+          btnText.innerHTML = "Read More";
+        } else {
+          dots.style.display = "none";
+          moreText.style.display = "inline";
+          btnText.innerHTML = "Read Less";
+        }
+      }
+    </script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+      import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBnDGSg_K60_Tp7w13c-O8Jb9hLkErSCY8",
+        authDomain: "gamexd-110.firebaseapp.com",
+        projectId: "gamexd-110",
+        storageBucket: "gamexd-110.firebasestorage.app",
+        messagingSenderId: "501792431454",
+        appId: "1:501792431454:web:10024d189316ef9e2303cf"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      const loginBtn = document.getElementById("loginBtn");
+      const logoutBtn = document.getElementById("logoutBtn");
+      const userEmail = document.getElementById("userEmail");
+      const userPic = document.getElementById("userPic");
+      const dropdown = document.getElementById("dropdown");
+
+      loginBtn.addEventListener("click", () => {
+        signInWithPopup(auth, provider)
+          .then(result => console.log("Logged in as", result.user.email))
+          .catch(err => console.error(err));
+      });
+
+      logoutBtn.addEventListener("click", () => {
+        signOut(auth).then(() => location.reload());
+      });
+
+      onAuthStateChanged(auth, user => {
+        if (user) {
+          userEmail.textContent = user.email;
+          userPic.src = user.photoURL;
+          userPic.style.display = "block";
+          loginBtn.style.display = "none";
+        } else {
+          userEmail.textContent = "";
+          loginBtn.style.display = "inline-block";
+          userPic.style.display = "none";
+          dropdown.style.display = "none";
+        }
+      });
+
+      userPic.addEventListener("click", () => {
+        dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("#userPic") && !e.target.closest("#dropdown")) {
+          dropdown.style.display = "none";
+        }
+      });
+
+    </script>
 </body>
+
 </html>
