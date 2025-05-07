@@ -816,6 +816,183 @@
       font-family: 'Poppins', sans-serif;
     }
 
+    .badgetexticon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1.4px solid rgba(0, 0, 0, 0.866);
+      border-radius: 999px;
+      background-color: rgba(255, 0, 55, 0.66);
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .badgtext {
+      font-size: 16px;
+    }
+
+    .game-slider-container {
+      text-align: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    .game-slider {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      padding: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 0 1rem;
+    }
+
+    .game-card22 {
+      flex: 0 0 auto;
+      width: 240px;
+      height: 320px;
+      background: #222;
+      border-radius: 12px;
+      overflow: hidden;
+      scroll-snap-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .game-slider {
+        padding: 0 1rem;
+        justify-content: flex-start;
+      }
+
+      .game-card22 {
+        width: 180px;
+        height: 240px;
+        scroll-snap-align: center;
+      }
+    }
+
+    .game-card22 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 5px;
+      background-color: #fff;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .features div {
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    .features i {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .features .highlight {
+      background-color: rgb(216, 1, 48);
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 5px;
+    }
+
+    .game-card22:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .iconbadge22 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: linear-gradient(to right, #ff0084, #ff0015);
+      color: #ffffff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+
+    @media (max-width: 768px) {
+      .game-card22 {
+        width: 180px;
+        height: 240px;
+      }
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #ff005d, #ff006a, #2f00ff, #ff29b1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      font-weight: 900;
+      font-family: fantasy;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .logo img {
+      height: 35px;
+      margin-right: 0.5rem;
+    }
+
+    @keyframes floatDragon {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+
+    .hero {
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    .hero-text {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .hero-text h4 {
+      color: #888;
+      font-size: 16px;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+
+    .hero-text p {
+      margin: 15px 0;
+      color: #555;
+    }
     body {
       font-weight: bold;
       /* Make all text bold */
@@ -861,105 +1038,34 @@
       </div>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <br>
-      <h1>New Arrivals</h1>
-      <p>Air Blow Guns, PU Pneumatic Pipes, & More Items...</p>
-      <div class="hero-buttons">
-
-        <div class="badgetexticon" onclick="window.location.href='product.html'">
-          <span class="badgtext">✨</span>
-          <b>DISCOVER</b>
-        </div>
-      </div>
+  <div class="game-slider-container">
+    <div class="badgetexticon">
+      <span class="badgtext">✨</span>
+      Most Popular
     </div>
-    <div class="hero-image">
-      <div class="price-tag">from<br><strong>$29</strong></div>
-      <!-- Slider -->
-      <div class="slider">
-        <div class="slide fade">
-          <img src="Air BLOW GUN.png" alt="Image 1" />
-        </div>
-        <div class="slide fade">
-          <img src="Air BLOW GUN (1).png" alt="Image 2" />
-        </div>
-        <div class="slide fade">
-          <img src="Air BLOW GUN (2).png" alt="Image 3" />
-        </div>
+    <br>
+    <br>
+    <div class="game-slider">
+      <div class="game-card22">
+        <span class="iconbadge22">Harjus Official</span>
+        <img src="Air BLOW GUN.png" onclick="window.location.href='product.html'"/>
       </div>
-    </div>
-  </section>
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      const slides = document.querySelectorAll(".slide");
-      slides.forEach(slide => slide.style.display = "none");
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change slide every 3 seconds
-    }
-  </script>
-
-
-
-
-  <section class="features">
-    <div><i class="fas fa-lock"></i>SECURE PAYMENTS</div>
-    <div class="highlight"><i class="fas fa-gem"></i>PREMIUM QUALITY</div>
-  </section>
-
-  <!-- Product Card Example -->
-  <div class="product-section">
-    <div class="product-container">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x160" />
-        <div class="product-info">
-          <h3>Air Blow Gun</h3>
-          <div class="product-rating">⭐⭐⭐⭐☆</div>
-          <p>₹1300</p>
-          <p class="last-sold" style="color: gray;">250+ Sold Last Month</p>
-          <button onclick="window.location.href='productdetail.html'">Detail</button>
-        </div>
+      <div class="game-card22">
+        <span class="iconbadge22">Harjus Official</span>
+        <img src="Air BLOW GUN (1).png" onclick="window.location.href='product.html'" />
       </div>
-
-      <div class="product-card" onclick="showProductDetail(2)">
-        <img src="https://via.placeholder.com/250x160/0000FF" />
-        <div class="product-info">
-          <h3>PU Pneumatic Pipe</h3>
-          <div class="product-rating">⭐⭐⭐☆☆</div>
-          <p>₹899</p>
-          <p class="last-sold" style="color: gray;">300+ Sold Last Month</p>
-          <button onclick="window.location.href='prodetail2.html'">Detail</button>
-        </div>
-      </div>
-
-      <div class="product-card" onclick="showProductDetail(3)">
-        <img src="https://via.placeholder.com/250x160/FF0000" />
-        <div class="product-info">
-          <h3>Pneumatic Nail Gun</h3>
-          <div class="product-rating">⭐⭐⭐⭐⭐</div>
-          <p>$120.49</p>
-          <p class="last-sold" style="color: gray;">800+ Sold Last Month</p>
-          <button onclick="window.location.href='productdetail.html'">Detail</button>
-        </div>
-      </div>
-      <div class="product-card" onclick="showProductDetail(3)">
-        <img src="https://via.placeholder.com/250x160/FF0000" />
-        <div class="product-info">
-          <h3>Pneumatic Nail Gun</h3>
-          <div class="product-rating">⭐⭐⭐⭐⭐</div>
-          <p>$120.49</p>
-          <p class="last-sold" style="color: gray;">800+ Last Month</p>
-          <button onclick="window.location.href='productdetail.html'">Detail</button>
-        </div>
+      <div class="game-card22">
+        <span class="iconbadge22">Harjus Official</span>
+        <img src="Air BLOW GUN (2).png"  onclick="window.location.href='product.html'"/>
       </div>
     </div>
     <br>
+    <br>
+    <section class="features">
+      <div><i class="fas fa-lock"></i>SECURE PAYMENTS</div>
+      <div class="highlight"><i class="fas fa-gem"></i>PREMIUM QUALITY</div>
+    </section>
+
     <div class="story-section">
       <h2 class="netflix-title">Story of Harjus</h2>
       <p id="storyText" class="story-text">
