@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -191,24 +190,6 @@
       /* Ensures images don't overflow */
     }
 
-    .slider {
-      position: relative;
-      max-width: 100%;
-      /* Full width of the parent container */
-      height: auto;
-    }
-
-    .slide {
-      display: none;
-      /* Hide slides initially */
-      width: 100%;
-      height: auto;
-    }
-
-    .slide img {
-      width: 100%;
-      border-radius: 10px;
-    }
 
     .price-tag {
       position: absolute;
@@ -233,7 +214,7 @@
     }
 
     /* Keyframes for the fade-in animation */
-    @keyframes fadeIn {
+    @keyframes fadeIn {                                                         
       from {
         opacity: 0;
       }
@@ -644,154 +625,62 @@
       font-weight: bold;
       padding: 18px;
     }
+       
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .footer {
-      margin: 0px;
-      background: linear-gradient(to right, #ff0000, #210000);
-      color: #fff;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .footer-col {
-      flex: 1 1 250px;
-      margin: 20px;
-      min-width: 220px;
-    }
+.footer h2, .footer h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
 
-    .footer-logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+}
 
-    .footer p {
-      line-height: 1.6;
-      font-size: 14px;
-      color: #ccc;
-    }
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .footer h4 {
-      margin-bottom: 15px;
-      color: #ffffff;
-      font-size: 18px;
-    }
+.footer-links ul li {
+  margin-bottom: 8px;
+}
 
-    .footer ul {
-      list-style: none;
-      padding: 0;
-    }
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
 
-    .footer ul li {
-      margin-bottom: 10px;
-    }
+.footer-links ul li a:hover {
+  color: #00ffc8;
+}
 
-    .footer ul li a {
-      color: #ccc;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .footer ul li a:hover {
-      color: #fff;
-    }
-
-    .social-icons a {
-      color: #ffffff;
-      margin-right: 15px;
-      font-size: 20px;
-      transition: 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
-    }
-
-    .subscribe input[type="email"] {
-      padding: 10px;
-      border: none;
-      border-radius: 3px;
-      margin-right: 5px;
-      width: 65%;
-      max-width: 250px;
-      margin-bottom: 10px;
-    }
-
-    .subscribe button {
-      padding: 10px 15px;
-      border: none;
-      box-shadow: 0 0 12px rgb(255, 0, 0);
-      border-radius: 20x;
-      background-color: #ff0022;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .subscribe button:hover {
-      background-color: #ff0000;
-    }
-
-    .footer-bottom {
-      background-color: #0d0d0d;
-      text-align: center;
-      padding: 15px 10px;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      .footer {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        padding: 30px 7px;
-      }
-
-      .footer-col {
-        margin: 20px 0;
-      }
-
-      .subscribe input[type="email"],
-      .subscribe button {
-        width: 90%;
-        max-width: 100%;
-      }
-
-      .subscribe {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .social-icons {
-        justify-content: center;
-        margin-top: 10px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-logo {
-        font-size: 24px;
-      }
-
-      .footer h4 {
-        font-size: 16px;
-      }
-
-      .social-icons a {
-        font-size: 18px;
-        margin-right: 10px;
-      }
-
-      .footer p {
-        font-size: 13px;
-      }
-    }
-
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
     .badgetexticon {
       display: inline-flex;
       align-items: center;
@@ -997,7 +886,267 @@
       font-weight: bold;
       /* Make all text bold */
     }
-  </style>
+    .products {
+      padding: 10px;
+    }
+    .products h2 {
+      margin-bottom: 10px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .product {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .product .title {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .product .price {
+      font-weight: bold;
+      color: #b12704;
+    }
+    .product button {
+      margin-top: 8px;
+      background-color: #ffd814;
+      border: 1px solid #fcd200;
+      padding: 6px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+
+.product-rating {
+      color: #f8c32b;
+      font-size: 14px;
+    }
+
+ .info h2 {
+      font-size: 1.5rem;
+      color: #2d2d2d;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .price {
+      color: rgb(227, 0, 0);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .stock {
+      color: #007b00;
+      margin: 0.5rem 0;
+    }
+
+    .options {
+      margin: 1rem 0;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .actions button {
+      padding: 0.7rem 1.5rem;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.product-rating {
+      color: #f8c32b;
+      font-size: 14px;
+    }
+
+
+    
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .product-list22 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+.info img{
+  width: 160px;
+  text-align: center;
+  align-items: center;
+  height: auto;
+}
+    .greycart {
+      background-color: #5a5a5a;
+      color: rgb(255, 255, 255);
+    }
+
+    .buy {
+      background-color: #dd0000;
+      color: rgb(255, 255, 255);
+    }
+    
+    .product-list22 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+ .why-harjus {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-harjus .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-harjus h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.reason {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.reason:hover {
+  transform: translateY(-5px);
+}
+
+.reason i {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.reason h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.reason p {
+  color: #555;
+  font-size: 0.95rem;
+}.amazon-slider {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 0; /* Remove padding for borderless full screen */
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.02);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+
+.slide-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slide-btn {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+}
+
+  </style><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -1038,11 +1187,64 @@
       </div>
     </div>
   </header>
-  <div class="game-slider-container">
-    <div class="badgetexticon">
-      <span class="badgtext">✨</span>
-      Most Popular
-    </div>
+
+
+  
+   <div class="amazon-slider">
+  <button class="slide-btn prev">&#10094;</button>
+  <div class="slider-track">
+    <div class="slide"><img src="Blue and Yellow Playful Doodle Digital Brainstorm Presentation.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="https://via.placeholder.com/200x250?text=Product+2" alt="Product 2"></div>
+    <div class="slide"><img src="https://via.placeholder.com/200x250?text=Product+3" alt="Product 3"></div>
+    <div class="slide"><img src="https://via.placeholder.com/200x250?text=Product+4" alt="Product 4"></div>
+    <div class="slide"><img src="https://via.placeholder.com/200x250?text=Product+5" alt="Product 5"></div>
+    <div class="slide"><img src="https://via.placeholder.com/200x250?text=Product+6" alt="Product 6"></div>
+  </div>
+  <button class="slide-btn next">&#10095;</button>
+</div><script>
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.slide-btn.next');
+  const prevBtn = document.querySelector('.slide-btn.prev');
+
+  let index = 0;
+  const totalSlides = slides.length;
+
+  function updateSlidePosition() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function showNextSlide() {
+    index = (index + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function showPrevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+
+  nextBtn.addEventListener('click', showNextSlide);
+  prevBtn.addEventListener('click', showPrevSlide);
+
+  // Auto slide every 4 seconds
+  let autoSlide = setInterval(showNextSlide, 3000);
+
+  // Optional: pause on hover
+  const slider = document.querySelector('.amazon-slider');
+  slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  slider.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(showNextSlide, 4000);
+  });
+</script>
+
+    <br>
+    <section class="features">
+      <div><i class="fas fa-lock"></i>SECURE PAYMENTS</div>
+      <div class="highlight"><i class="fas fa-gem"></i>PREMIUM QUALITY</div>
+    </section>
+
+
     <br>
     <br>
     <div class="game-slider">
@@ -1056,16 +1258,37 @@
       </div>
       <div class="game-card22">
         <span class="iconbadge22">Harjus Official</span>
-        <img src="Air BLOW GUN (2).png"  onclick="window.location.href='product.html'"/>
+        <img src="Air BLOW GUN (2).png"  onclick="window.location.href='product.html'"/>Add commentMore actions
       </div>
     </div>
     <br>
-    <br>
-    <section class="features">
-      <div><i class="fas fa-lock"></i>SECURE PAYMENTS</div>
-      <div class="highlight"><i class="fas fa-gem"></i>PREMIUM QUALITY</div>
-    </section>
-
+<section class="why-harjus">
+  <div class="container">
+    <h2>Why Choose Harjus India?</h2>
+    <div class="reasons">
+      <div class="reason">
+        <i class="fas fa-cogs"></i>
+        <h3>High-Quality Tools</h3>
+        <p>We provide durable, precision-engineered tools built for industrial and personal use.</p>
+      </div>
+      <div class="reason">
+        <i class="fas fa-truck"></i>
+        <h3>Fast & Reliable Delivery</h3>
+        <p>Quick shipping across India with real-time tracking and trusted logistics partners.</p>
+      </div>
+      <div class="reason">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Customer Support</h3>
+        <p>Our support team is always available to resolve your queries and provide expert guidance.</p>
+      </div>
+      <div class="reason">
+        <i class="fas fa-thumbs-up"></i>
+        <h3>Trusted by Professionals</h3>
+        <p>Preferred by technicians, engineers, and industrial experts across the country.</p>
+      </div>
+    </div>
+  </div>
+</section>
     <div class="story-section">
       <h2 class="netflix-title">Story of Harjus</h2>
       <p id="storyText" class="story-text">
@@ -1090,21 +1313,25 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000 });</script>
     <br>
-    <footer class="footer">
-      <div class="footer-col">
-        <div class="footer-logo">Harjus India Official</div>
-        <div class="footer-col">
-          <h4>Mail Us!</h4>
-          <form class="subscribe">
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-    </footer>
-
-    <div class="footer-bottom">
-      © 2025 Harjus. All rights reserved. |
+     <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>Harjus Hardwares</h2>
+        <p>Your one-stop shop for Industrial Pneumatic Equipment </p>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>Email: support@harjushardwares.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
     </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Harjus Hardwares. All rights reserved.</p>
+    </div>
+  </footer>
+
     <script>
       function handleSearch() {
         const query = document.getElementById("searchBar").value.trim().toLowerCase();
