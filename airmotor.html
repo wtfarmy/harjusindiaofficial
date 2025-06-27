@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Blow Gun - Harjus Hardwares</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .images {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .images img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .details h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #e53935;
+      margin: 10px 0;
+    }
+
+    .description {
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .stock {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #ffb400;
+      margin-bottom: 10px;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+    }
+
+    .btn-contact {
+      padding: 12px 25px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-contact:hover {
+      background-color: #1565c0;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .contact-form h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #e65100;
+    }
+
+    .reviews {
+      margin-top: 30px;
+    }
+
+    .review-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .review-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      flex: 1;
+    }
+
+    .review-name {
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .review-time {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .review-stars {
+      color: #ffb400;
+    }
+
+    @media (max-width: 768px) {
+      .product-section {
+        flex-direction: column;
+      }
+    }.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 100%;
+  height: 300px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: auto;
+  }
+}@media (max-width: 768px) {
+  .slider-container {
+    height: 220px;
+  }
+}
+
+
+.btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-cart {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    .btn-cart:hover {
+      background-color: #1565c0;
+    }
+
+    .btn-buy {
+      background-color: #ff6f00;
+      color: white;
+    }
+
+    .btn-buy:hover {
+      background-color: #e65100;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="product-section">
+   <div class="images slider-container">
+  <div class="slider" id="slider">
+     <img src="frlunit1.jpg" class="slide" />
+          <img src="frlunit2.jpg" class="slide" />
+          <img src="frlunit3.jpg" class="slide" />
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+<script>
+  let currentIndex = 0;
+  const slider = document.getElementById('slider');
+  const totalSlides = slider.children.length;
+
+  function moveSlide(step) {
+    currentIndex += step;
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
+      <div class="details">
+        <h2>FRL Unit - Air Filter Regulator Lubricator Combo</h2>
+        <div class="price">₹1,799</div>
+        <div class="rating">★★★★☆ (4.5/5)</div>
+        <div class="stock">In Stock</div>
+        <p class="description">
+          This FRL Unit is a 3-in-1 combo of Air Filter, Pressure Regulator, and Lubricator designed for pneumatic systems. It ensures clean, controlled and lubricated air supply to extend the life of your equipment and improve efficiency.
+        </p>
+        <ul>
+          <li>Material: Metal + ABS composite</li>
+          <li>Max Pressure: 140 PSI (10 Bar)</li>
+          <li>Port Size: 1/4 inch BSP</li>
+          <li>Use: Air compressors, pneumatic tools, machinery</li>
+          <li>Features: Gauge, drain valve, lubrication control</li>
+        </ul>
+
+        <div class="btn-group">
+          <button class="btn btn-cart">Add to Cart</button>
+          <button class="btn btn-buy">Buy Now</button>
+        </div>
+      </div>
+    </div>
+<br>
+    <div class="contact-form" id="contact">
+      <h3>Contact Us to Buy This Product</h3>
+      <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="address" placeholder="Your Address" required />
+        <textarea name="message" rows="4" placeholder="Your Message or Requirement"></textarea>
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </div>
+   <div class="reviews">
+      <h3>Customer Reviews</h3>
+
+      <div class="review-item">
+        <img class="review-avatar" src="https://i.pravatar.cc/50?img=18" alt="User" />
+        <div class="review-content">
+          <div class="review-name">Surya Pneumatics</div>
+          <div class="review-time">3 days ago</div>
+          <div class="review-stars">★★★★★</div>
+          <p>"Excellent quality and performance. Keeps our tools running smooth without moisture damage."</p>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <img class="review-avatar" src="https://i.pravatar.cc/50?img=39" alt="User" />
+        <div class="review-content">
+          <div class="review-name">Annie Karl</div>
+          <div class="review-time">5 days ago</div>
+          <div class="review-stars">★★★★☆</div>
+          <p>"Build quality is good and pressure regulation is accurate. Would recommend for shop use."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
